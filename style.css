@@ -1,0 +1,167 @@
+:root {
+  --accent: #ffb86b;
+  --dark: #222;
+  --muted: #666;
+  --bg: #fffefc;
+  --card: #fff;
+  font-family: Inter, Roboto, system-ui, -apple-system, "Segoe UI", "Helvetica Neue", Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #fffefc, #fff8f0);
+  color: var(--dark);
+  line-height: 1.5;
+}
+
+header {
+  background: var(--accent);
+  padding: 18px 20px;
+  color: #2b1b10;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.brand {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.brand h1 {
+  font-size: 20px;
+  margin: 0;
+}
+
+nav {
+  margin-top: 8px;
+}
+
+nav a {
+  color: rgba(43,27,16,0.9);
+  text-decoration: none;
+  margin-right: 14px;
+  font-weight: 600;
+}
+
+main {
+  padding: 28px 16px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.card {
+  background: var(--card);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.intro h2 {
+  margin: 0 0 8px 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.grid .card {
+  padding: 12px;
+}
+
+section h3 {
+  margin-top: 0;
+}
+
+ul {
+  margin: 8px 0 0 18px;
+}
+
+footer {
+  padding: 24px 16px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Галерея */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.gallery img {
+  width: calc(33.333% - 6.66px);
+  border-radius: 8px;
+  display: block;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Адаптивність */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery img {
+    width: calc(50% - 5px);
+    height: 140px;
+  }
+}
+
+@media (max-width: 520px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .gallery img {
+    width: 100%;
+    height: 200px;
+  }
+  nav {
+    display: none;
+  }
+}
+
+.small {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: var(--dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.fact {
+  background: linear-gradient(90deg, #fff8ef, #fff);
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 600;
